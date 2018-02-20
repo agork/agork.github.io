@@ -344,6 +344,10 @@ iframe{
   .content p{
     text-align: left;
   }
+  /* history */
+  .history_container{
+    width:100%;
+  }
 }
 /* SPINNING GEAR */
 .parent{
