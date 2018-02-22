@@ -17,6 +17,7 @@ body{
   font-family: 'Montserrat', sans-serif;
   color:rgb(20, 12, 7);
   background-color: rgb(237, 236, 232);
+  overflow-x: hidden;
 }
 section{
   width:60%;
@@ -42,6 +43,13 @@ button:focus {
 ::selection {
   color: rgb(237, 236, 232);
   background: rgb(143, 126, 97);
+}
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 /* NAVIGATION */
 .menu-trigger {
@@ -146,6 +154,48 @@ h3{
 }
 .content p{
   text-align: justify;
+}
+.content p::first-letter{
+  color:rgb(143, 126, 97);
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/* place */
+.place p, .breakout{
+  width:50%;
+  float:left;
+  position: relative;
+}
+.breakout>div{
+  height:210px;
+  width:200px;
+  background-color: white;
+  position:absolute;
+}
+.breakout>div>div{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:160px;
+  width:180px;
+  margin:10px;
+  position: relative;
+}
+.img1{
+  background-image: url("images/krakow.jpg");
+}
+.img2{
+  background-image: url("images/krakow2.jpeg");
+}
+.breakout>div:first-child{
+  transform: rotate(-10deg);
+  left:30px;
+  top:20px;
+}
+.breakout>div:nth-child(2){
+  transform: rotate(20deg);
+  left:210px;
+  top:70px;
 }
 /* content for files and button and flex */
 .button{
@@ -327,6 +377,29 @@ iframe{
   }
   .content p{
     text-align: left;
+  }
+  /* place */
+  .place p, .breakout{
+    width:100%;
+  }
+  .breakout{
+    height:200px;
+  }
+  .breakout>div{
+    height:190px;
+    width:180px;
+  }
+  .breakout>div>div{
+    height:140px;
+    width:160px;
+  }
+  .breakout>div:first-child{
+    left:0;
+    top:20px;
+  }
+  .breakout>div:nth-child(2){
+    left:160px;
+    top:50px;
   }
   /* history */
   .history_container{
