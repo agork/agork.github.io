@@ -151,6 +151,7 @@ h3{
   font-size:25px;
   font-weight:400;
   padding:10px;
+  margin:20px 0 10px 0;
 }
 .content p{
   text-align: justify;
@@ -159,6 +160,16 @@ h3{
   color:rgb(143, 126, 97);
   font-weight: bold;
   font-size: 1.3em;
+}
+/* organizers */
+.loga{
+  background-color: white;
+  margin-bottom:10px;
+  padding:15px;
+  text-align: center;
+}
+.loga img{
+  width:15%;
 }
 /* place */
 .place p, .breakout{
@@ -258,6 +269,34 @@ h4{
 .strong{
   font-weight: 500;
 }
+/* workshops */
+.workshops .item{
+  background-color: rgba(179, 173, 162, 0.4);
+}
+.workshops h4{
+  text-align: center;
+}
+.workshops .img{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:130px;
+}
+.workshops .item:nth-child(1)>.img{
+  background-image: url("images/statystyka.jpg");
+}
+.workshops .item:nth-child(2)>.img{
+  background-image: url("images/sedymentologia.jpg");
+}
+.workshops .item:nth-child(3)>.img{
+  background-image: url("images/paleobotanika.jpg");
+}
+.workshops .item:nth-child(4)>.img{
+  background-image: url("images/malakofauna.jpg");
+}
+.workshops .item:nth-child(5)>.img{
+  background-image: url("images/geochemia.jpg");
+}
 /* MAP */
 iframe{
   width:100%;
@@ -316,7 +355,7 @@ iframe{
 }
 .communicate>p{
   color:rgb(95, 71, 43);
-  padding:5px;
+  padding:10px;
 }
 /* BOTTOM SECTION */
 #bottom{
