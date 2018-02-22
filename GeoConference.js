@@ -50,6 +50,7 @@ $(window).scroll(function () {
 
 //history map
 var map;
+var mkrakow, mwarszawa, mpoznan, mgdansk, mtorun, mlublin, mlodz, mszczecin;
 function initialize() {
 	var mapOptions = {
 		center: new google.maps.LatLng(52.219438, 19.145136),
@@ -69,14 +70,14 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     //Markers
-  var mkrakow = new google.maps.Marker( {position: krakow, map: map} );
-  var mwarszawa = new google.maps.Marker( {position: warszawa, map: map} );
-  var mpoznan = new google.maps.Marker( {position: poznan, map: map} );
-  var mgdansk = new google.maps.Marker( {position: gdansk, map: map} );
-  var mtorun = new google.maps.Marker( {position: torun, map: map} );
-  var mlublin = new google.maps.Marker( {position: lublin, map: map} );
-  var mlodz = new google.maps.Marker( {position: lodz, map: map} );
-  var mszczecin = new google.maps.Marker( {position: szczecin, map: map} );
+   mkrakow = new google.maps.Marker( {position: krakow, map: map} );
+   mwarszawa = new google.maps.Marker( {position: warszawa, map: map} );
+   mpoznan = new google.maps.Marker( {position: poznan, map: map} );
+   mgdansk = new google.maps.Marker( {position: gdansk, map: map} );
+   mtorun = new google.maps.Marker( {position: torun, map: map} );
+   mlublin = new google.maps.Marker( {position: lublin, map: map} );
+   mlodz = new google.maps.Marker( {position: lodz, map: map} );
+   mszczecin = new google.maps.Marker( {position: szczecin, map: map} );
 }
 
 google.maps.event.addDomListener(window,'load',initialize);
