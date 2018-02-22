@@ -138,13 +138,9 @@ h2{
   font-size:25px;
 }
 /* WEBSITE CONTENT */
-.title_bcg{
-  background-color:rgba(0,0,0,0.85);
-  color:rgb(237, 236, 232);
-  text-align: center;
-}
 h3{
-  font-size:20px;
+  text-align:center;
+  font-size:25px;
   font-weight:400;
   padding:10px;
 }
@@ -209,29 +205,8 @@ h4{
   font-size:22px;
   padding:5px;
 }
-h4 .strong{
+.strong{
   font-weight: 500;
-}
-/* content for contact */
-form{
-  text-align: center;
-}
-form input,
-form textarea{
-  width:92%;
-  height:40px;
-  margin:5px;
-  padding:15px;
-  font-family: 'Montserrat', sans-serif;
-}
-form input:focus,
-form textarea:focus{
-  background-color: rgba(143, 126, 97,0.4);
-  outline: 0;
-}
-form textarea{
-  height:150px;
-  resize: none;
 }
 /* MAP */
 iframe{
@@ -283,6 +258,15 @@ iframe{
 .history_container p{
   margin:5px;
   font-size:13px;
+}
+.communicate{
+  border: 1px solid rgb(95, 71, 43);
+  border-radius:5px;
+  margin-bottom: 10px;
+}
+.communicate>p{
+  color:rgb(95, 71, 43);
+  padding:5px;
 }
 /* BOTTOM SECTION */
 #bottom{
