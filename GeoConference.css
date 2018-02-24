@@ -327,6 +327,9 @@ iframe{
   border:0;
 }
 /* HISTORY */
+#history{
+  background-color: white;
+}
 #map-canvas{
   height: 400px;
   width: 100%;
@@ -335,15 +338,17 @@ iframe{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom:20px;
 }
 .history_item{
   margin:5px;
-  padding:5px;
+  padding:8px;
   border: 1px solid rgb(143, 126, 97);
   border-radius:5px;
   color:rgb(143, 126, 97);
   display: inline-flex;
   transition-duration: 0.5s;
+  background-color: rgba(143, 126, 97, 0.15);
 }
 .history_item:hover,
 .active_history_item{
