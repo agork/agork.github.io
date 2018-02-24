@@ -151,7 +151,7 @@ h3{
   font-size:25px;
   font-weight:400;
   padding:10px;
-  margin:20px 0 10px 0;
+  margin:50px 0 15px 0;
 }
 .content p{
   text-align: justify;
@@ -162,6 +162,11 @@ h3{
   font-size: 1.3em;
 }
 /* organizers */
+.organizers_div{
+  width:60%;
+  margin:auto;
+  padding-bottom:55px;
+}
 .loga{
   background-color: white;
   margin-bottom:10px;
@@ -169,7 +174,25 @@ h3{
   text-align: center;
 }
 .loga img{
-  width:15%;
+  width:100%;
+}
+.organizers{
+  font-size:1.1em;
+  list-style: none;
+  text-align: center;
+}
+.organizers li:not(:last-child){
+  margin-bottom:12px;
+}
+.organizers li:not(:first-child){
+  margin-top:10px;
+}
+.organizers a{
+  color:black;
+}
+.organizers hr{
+  width:35%;
+  margin:auto;
 }
 /* place */
 .place p, .breakout{
@@ -367,6 +390,9 @@ iframe{
 /* MOBILE VERSION */
 @media only screen and (max-width: 768px){
   section{
+    width:95%;
+  }
+  .organizers_div{
     width:95%;
   }
   header{
