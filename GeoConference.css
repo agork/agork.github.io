@@ -166,6 +166,7 @@ h3{
   width:60%;
   margin:auto;
   padding-bottom:55px;
+  max-width:1000px;
 }
 .loga{
   background-color: white;
@@ -294,30 +295,54 @@ h4{
 }
 /* workshops */
 .workshops .item{
-  background-color: rgba(179, 173, 162, 0.4);
-}
-.workshops h4{
-  text-align: center;
-}
-.workshops .img{
+  height:170px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height:130px;
+  position: relative;
+  overflow: hidden;
 }
-.workshops .item:nth-child(1)>.img{
+.workshops h4{
+  text-align: center;
+  background-color: rgb(200, 200, 200);
+  position: absolute;
+  bottom:0;
+  width:100%;
+  transition-duration: 0.5s;
+  line-height: 40px;
+  height:40px;
+  padding: 0;
+}
+.work_desc{
+  background-color: rgba(240, 240, 240, 0.9);
+  position: absolute;
+  top:170px;
+  height:130px;
+  width:100%;
+  transition-duration: 0.5s;
+}
+.work_desc div{
+  margin:10px;
+}
+.workshops .item:hover h4{
+  bottom:130px;
+}
+.item:hover .work_desc{
+  top:40px;
+}
+.workshops .item:nth-child(1){
   background-image: url("images/statystyka.jpg");
 }
-.workshops .item:nth-child(2)>.img{
+.workshops .item:nth-child(2){
   background-image: url("images/sedymentologia.jpg");
 }
-.workshops .item:nth-child(3)>.img{
+.workshops .item:nth-child(3){
   background-image: url("images/paleobotanika.jpg");
 }
-.workshops .item:nth-child(4)>.img{
+.workshops .item:nth-child(4){
   background-image: url("images/malakofauna.jpg");
 }
-.workshops .item:nth-child(5)>.img{
+.workshops .item:nth-child(5){
   background-image: url("images/geochemia.jpg");
 }
 /* MAP */
@@ -359,22 +384,30 @@ iframe{
   position: absolute;
   top:0;
   width:60%;
+  margin:10px 0 0;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   background-color:white;
   text-align: center;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   padding:5px;
 }
-.history_container h5{
-  font-size: 20px;
-  font-weight:300;
+.history_container .close{
+  position: absolute;
+  top:10px;
+  right:10px;
+  cursor: pointer;
+  font-weight: bold;
 }
 .history_container p{
-  margin:5px;
-  font-size:13px;
+  margin:5px 20px;
+  font-size: 17px;
+  font-weight:300;
+}
+.history_container a{
+  font-size:14px;
 }
 .communicate{
   border: 1px solid rgb(95, 71, 43);

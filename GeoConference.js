@@ -14,7 +14,7 @@ var x = setInterval(function() {
 
     if (distance < 0) {
       clearInterval(x);
-      $("#countdown").html("KONFERENCJA TRWA");
+      $("#countdown").hide();
     }
   }, 1000);
 
@@ -83,10 +83,14 @@ function initialize() {
 google.maps.event.addDomListener(window,'load',initialize);
 
 //history
+$(".history_container").hide();
 $(".history_item").click(( event ) => {
   var desc = $(event.target).closest(".history_item").attr('data-name');
   $(".history_container").hide().html(desc).fadeIn();
 
   $(".active_history_item").removeClass("active_history_item");
   $(event.target).closest(".history_item").addClass("active_history_item");
+});
+$('.history_container').on('click', '.close', function(){
+  $(".history_container").hide();
 });
