@@ -179,13 +179,12 @@ h3{
 }
 .organizers{
   font-size:1.1em;
-  list-style: none;
   text-align: center;
 }
-.organizers li:not(:last-child){
+.organizers p:not(:last-child){
   margin-bottom:12px;
 }
-.organizers li:not(:first-child){
+.organizers p:not(:first-child){
   margin-top:10px;
 }
 .organizers a{
@@ -195,11 +194,17 @@ h3{
   width:35%;
   margin:auto;
 }
-/* place */
-.place p, .breakout{
+/* place and styling of conference desc */
+.wherewhen>div{
+  float:left;
+}
+.double>div{
   width:50%;
   float:left;
   position: relative;
+}
+.breakout{
+  min-height:250px;
 }
 .breakout>div{
   height:210px;
@@ -217,7 +222,7 @@ h3{
   position: relative;
 }
 .img1{
-  background-image: url("images/krakow.jpg");
+  background-image: url("images/up.jpg");
 }
 .img2{
   background-image: url("images/krakow2.jpeg");
@@ -295,7 +300,7 @@ h4{
 }
 /* workshops */
 .workshops .item{
-  height:170px;
+  height:190px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -316,16 +321,24 @@ h4{
 .work_desc{
   background-color: rgba(240, 240, 240, 0.9);
   position: absolute;
-  top:170px;
-  height:130px;
+  top:190px;
+  height:150px;
   width:100%;
   transition-duration: 0.5s;
+  font-size: 14px;
+}
+.work_desc a{
+  width:100%;
+  display: inline-block;
+  text-align: center;
+  /* read more hidden */
+  display: none;
 }
 .work_desc div{
   margin:10px;
 }
 .workshops .item:hover h4{
-  bottom:130px;
+  bottom:150px;
 }
 .item:hover .work_desc{
   top:40px;
@@ -425,6 +438,9 @@ iframe{
   text-align: center;
   padding:10px;
 }
+.author{
+  color:rgba(237, 236, 232,0.7);
+}
 /* MOBILE VERSION */
 @media only screen and (max-width: 768px){
   section{
@@ -482,7 +498,7 @@ iframe{
     text-align: left;
   }
   /* place */
-  .place p, .breakout{
+  .double>div{
     width:100%;
   }
   .breakout{

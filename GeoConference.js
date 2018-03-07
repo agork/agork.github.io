@@ -1,3 +1,39 @@
+//Preload images first
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+var images = Array("images/bcg5.jpg",
+                   "images/bcg6.jpg",
+                   "images/bcg7.jpg",
+                   "images/fog.jpg");
+$([images[0],images[1],images[2],images[3]]).preload();
+// Usage:
+var currimg = 0;
+$(document).ready(function(){
+    function loadimg(){
+       $('#top').animate({ opacity: 1 }, 500,function(){
+            //finished animating, minifade out and fade new back in
+            $('#top').animate({ opacity: 0.7 }, 100,function(){
+                currimg++;
+                if(currimg > images.length-1){
+                    currimg=0;
+                }
+                var newimage = images[currimg];
+                //swap out bg src
+                $('#top').css("background-image", "url("+newimage+")");
+                //animate fully back in
+                $('#top').animate({ opacity: 1 }, 400,function(){
+                    //set timer for next
+                    setTimeout(loadimg,5000);
+                });
+            });
+        });
+     }
+     setTimeout(loadimg,5000);
+});
+
 //counter
 var countDownDate = new Date("Mar 15, 2018 10:00:00").getTime();
 var x = setInterval(function() {
