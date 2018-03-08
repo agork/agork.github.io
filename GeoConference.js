@@ -4,10 +4,10 @@ $.fn.preload = function() {
         $('<img/>')[0].src = this;
     });
 }
-var images = Array("images/bcg5.jpg",
+var images = Array("images/fog.jpg",
                    "images/bcg6.jpg",
                    "images/bcg7.jpg",
-                   "images/fog.jpg");
+                   "images/bcg5.jpg");
 $([images[0],images[1],images[2],images[3]]).preload();
 // Usage:
 var currimg = 0;
@@ -58,6 +58,10 @@ var x = setInterval(function() {
 $(".menu-trigger").click(() => {
   $("#nav_wrap").slideToggle("slow");
 });
+
+//place imgs
+var wysokosc_lewa = $(".double").first().height();
+$(".breakout").height(wysokosc_lewa);
 
 //button download
 $(".button").hover(
