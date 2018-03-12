@@ -59,6 +59,12 @@ $(".menu-trigger").click(() => {
   $("#nav_wrap").slideToggle("slow");
 });
 
+//literature
+$("#literature").click(() => {
+  $("#literature_list").slideToggle("slow");
+  return false;
+});
+
 //place imgs
 var wysokosc_lewa = $(".double").first().height();
 $(".breakout").height(wysokosc_lewa);

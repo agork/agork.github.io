@@ -16,7 +16,7 @@ rgb(143, 126, 97) swampy
 body{
   font-family: 'Montserrat', sans-serif;
   color:rgb(20, 12, 7);
-  background-color: rgb(237, 236, 232);
+  background-color: rgb(247, 246, 242);
   overflow-x: hidden;
 }
 section{
@@ -161,6 +161,25 @@ h3{
   font-weight: bold;
   font-size: 1.3em;
 }
+/* divider */
+.spacer {
+    margin:30px auto;
+    width:50%;
+    position:relative;
+}
+.spacer .mask {
+    overflow:hidden;
+    height:20px;
+}
+.spacer .mask:after {
+    content:'';
+    display:block;
+    margin:-25px auto 0;
+    width:100%;
+    height:25px;
+    border-radius:125px / 12px;
+    box-shadow:0 0 8px black;
+}
 /* organizers */
 .organizers_div{
   width:60%;
@@ -296,6 +315,37 @@ h4{
 }
 .strong{
   font-weight: 500;
+}
+/* torfowiska krakow */
+h6{
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+}
+.side_img{
+  margin:20px 0 15px 20px;
+  float:right;
+}
+.side_img img{
+  width:300px;
+}
+figure {
+  display: table;
+}
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align:justify;
+  font-size:13px;
+}
+#literature_list{
+  display: none;
+}
+#literature_list ul{
+  list-style: square inside;
+}
+#literature_list ul li{
+  margin-top: 5px;
 }
 /* workshops */
 .workshops .item{
@@ -441,7 +491,7 @@ iframe{
   color:rgba(237, 236, 232,0.7);
 }
 /* MOBILE VERSION */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 868px){
   section{
     width:95%;
   }
@@ -500,12 +550,16 @@ iframe{
   .double>div{
     width:100%;
   }
-  .breakout{
-    height:200px;
-  }
   /* history */
   .history_container{
     width:100%;
+  }
+  /* torfowiska krakow */
+  .side_img img{
+    width:100%;
+  }
+  .side_img{
+    margin:auto;
   }
 }
 /* SPINNING GEAR */
