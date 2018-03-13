@@ -55,11 +55,15 @@ var x = setInterval(function() {
   }, 1000);
 
 //mobile menu
+if ($(window).width() < 868) {
+   $("#nav_wrap").hide();
+}
 $(".menu-trigger").click(() => {
   $("#nav_wrap").slideToggle("slow");
 });
 
 //literature
+$("#literature_list").hide();
 $("#literature").click(() => {
   $("#literature_list").slideToggle("slow");
   return false;

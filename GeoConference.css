@@ -338,9 +338,6 @@ figcaption {
   text-align:justify;
   font-size:13px;
 }
-#literature_list{
-  display: none;
-}
 #literature_list ul{
   list-style: square inside;
 }
@@ -547,7 +544,6 @@ iframe{
     display:block;
   }
   #nav_wrap{
-    display:none;
     position: relative;
   }
   #nav_wrap li{
