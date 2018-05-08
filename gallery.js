@@ -1,4 +1,4 @@
-var folder = "images/2018_03_15-16_sesja_ix/";
+var folder = "/images/2018_03_15-16_sesja_ix/";
 
 $.ajax({
     url : folder,
