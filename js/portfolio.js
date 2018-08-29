@@ -2,6 +2,7 @@ var canvasContainer = document.getElementById('top');
 var WIDTH = canvasContainer.offsetWidth,
 HEIGHT = canvasContainer.offsetHeight,
 numberOfP = 40,
+rangeOfP = 300,
 pSpeed = 0.5,
 mouseOn = false,
 wentOff = false;
@@ -15,6 +16,9 @@ function checkView(){
     document.getElementById('particleContainer').style.display = 'none';
     document.getElementById('alternateTop').style.display = 'block';
   }
+  numberOfP = Math.round(WIDTH / 40);
+  rangeOfP = numberOfP*10;
+  console.log("ilośćP: "+numberOfP+" zasięgP: "+rangeOfP);
 }
 checkView();
 
@@ -85,7 +89,7 @@ function draw(){
     for(var j = i+1; j < numberOfP; j++){
       var p2 = PARTICLES[j];
       let d = dist(p1, p2);
-      let c = eval(d, 0, 300, 0, 255);
+      let c = eval(d, 0, rangeOfP, 0, 255);
       context.beginPath();
       context.strokeStyle = 'rgba('+c+','+c+','+c+', 0.1)';
       context.moveTo(p1.x(), p1.y());
