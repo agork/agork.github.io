@@ -1,3 +1,4 @@
+//PARTICLE SYSTEM
 var canvasContainer = document.getElementById('top');
 var WIDTH = canvasContainer.offsetWidth,
 HEIGHT = canvasContainer.offsetHeight,
@@ -11,14 +12,13 @@ wentOff = false;
 function checkView(){
   if(WIDTH>500){
     document.getElementById('particleContainer').style.display = 'block';
-    document.getElementById('alternateTop').style.display = 'none';
+    //document.getElementById('alternateTop').style.display = 'none';
   }else{
     document.getElementById('particleContainer').style.display = 'none';
     document.getElementById('alternateTop').style.display = 'block';
   }
   numberOfP = Math.round(WIDTH / 40);
   rangeOfP = numberOfP*10;
-  console.log("ilośćP: "+numberOfP+" zasięgP: "+rangeOfP);
 }
 checkView();
 
@@ -124,11 +124,10 @@ function draw(){
     p.x(p.x()+movementV[0]);
     p.y(p.y()+movementV[1]);
 
-    //need to add opacity play with distance
     //magic :)
     if(mouseOn){
       var d = distMandP(m, p);
-      let s = eval(d, 0, 350, 160, 8);
+      let s = eval(d, 0, rangeOfP, 160, 8);
       p.setAttr('radius', s);
       let o = eval(d, 0, 200, 1, 0.5);
       p.setAttr('opacity', o);
@@ -165,4 +164,27 @@ function eval(x, sta1, sto1, sta2, sto2){
     return Math.max(Math.min(newval, sto2), sta2);
   else
     return Math.max(Math.min(newval, sta2), sto2);
+}
+
+//NAVIGATION
+var menuIcon = document.getElementById("menuIcon"),
+isMenuOn = false;
+menuIcon.addEventListener("click", triggerMenu);
+
+function triggerMenu(){
+  if(isMenuOn){
+    document.getElementById("sideMenu").style.width = '0px';
+    isMenuOn = false;
+  }else{
+    if(WIDTH>500)
+      document.getElementById("sideMenu").style.width = '400px';
+    else
+      document.getElementById("sideMenu").style.width = '100%';
+    isMenuOn = true;
+  }
+}
+
+var menuButtons = document.querySelectorAll(".menuButton");
+for(var i = 0 ; i < menuButtons.length; i++){
+  menuButtons[i].addEventListener("click", triggerMenu);
 }

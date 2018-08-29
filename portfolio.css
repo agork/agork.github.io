@@ -6,6 +6,7 @@
 }
 body{
   font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Just Me Again Down Here', cursive;*/
   font-size: 20px;
 }
 section{
@@ -13,12 +14,95 @@ section{
   padding:0 40px;
   margin:auto;
 }
+h2{
+  font-weight:400;
+  font-size:1.8em;
+}
 .clearfix:after {
   content: ".";
   visibility: hidden;
   display: block;
   height: 0;
   clear: both;
+}
+/* MENU */
+#menuIcon{
+  z-index:10;
+  position: fixed;
+  top:10px;
+  right:10px;
+  transition-duration: 1s;
+  background-color: rgba(255, 209, 26, 0.85);
+  opacity:0.5;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+}
+#menuIcon:hover{
+  opacity:0.9;
+}
+#menuIcon span{
+  display:block;
+  background-color: black;
+  width:34px;
+  height:4px;
+  margin:10px 18px;
+  position: relative;
+  top:10px;
+}
+#sideMenu{
+  z-index:9;
+  position:fixed;
+  top:0;
+  right:0;
+  text-align: center;
+  overflow:hidden;
+  width:0;
+  height:100%;
+  transition: 0.8s;
+  background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(25%, rgba(255,255,255,0.95)), color-stop(100%, rgba(255,255,255,0.95))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* ie10+ */
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* w3c */
+}
+#sideMenu>div{
+  position:relative;
+  display:inline-block;
+  top:50%;
+  transform:translateY(-50%);
+}
+.menuButton{
+  display:inline-block;
+  padding:8px 14px;
+  margin:5px;
+  color:rgba(0,0,0,1);
+  text-transform: uppercase;
+  transition-duration: 0.5s;
+  position: relative;
+  left:calc(50% + 20px);
+  transform:translateX(-50%);
+  float:left;
+  clear:left;
+  font-weight:700;
+  border: 2px solid black;
+}
+.menuButton::after{
+  z-index:-2;
+  position: absolute;
+  top:0;
+  left:50%;
+  content:"";
+  width:0;
+  height:100%;
+  background-color:rgba(255, 209, 26, 1);
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.menuButton:hover::after{
+  width:100%;
+  left:0;
 }
 /* TOP */
 #top{
@@ -30,6 +114,7 @@ section{
   background-position: center;
   background-size: cover;
   mix-blend-mode: unset;
+  position: relative;
 }
 #particleContainer{
   position:absolute;
@@ -37,30 +122,62 @@ section{
 }
 #top>section{
   position: absolute;
+  left:0;
+  right:0;
+  z-index:3;
+  pointer-events: none;
+  bottom:0;
 }
 h1{
   font-size:2em;
-  font-weight:200;
-  padding-top:100px;
+  font-weight:400;
+  padding-bottom:100px;
 }
 h1>span{
   background-color: rgba(255, 209, 26, 0.85);
   line-height: 1.4;
   padding:0 10px;
 }
+/* ABOUT ME */
+#about{
+
+}
+/* PROJECTS */
+#projects{
+  max-width: 1600px;
+}
+.projectContainer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project{
+  width: 50%;
+  height:300px;
+}
+.project>div{
+  width:50%;
+  height:100%;
+  float:left;
+}
+.projectDescription{
+
+}
+.projectImage{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.i1{
+  background-image: url("img/pr1.jpg");
+}
+.i2{
+  background-image: url("img/pr2.jpg");
+}
+.i3{
+  background-image: url("img/pr3.jpg");
+}
+.i4{
+  background-image: url("img/pr4.jpg");
+}
 /* CONTACT */
-#contact h2{
-  display:inline-block;
-  background: -webkit-linear-gradient(60deg, red, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 5px solid;
-  border-image: linear-gradient(60deg, red, blue);
-  border-image-slice: 1;
-  padding:3px 7px;
-  cursor:pointer;
-}
-#contact h2:hover{
-  -webkit-background-clip: border-box;
-  -webkit-text-fill-color: white;
-}
