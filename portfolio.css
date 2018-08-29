@@ -1,0 +1,66 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+section{
+  max-width: 1600px;
+  padding:0 40px;
+  margin:auto;
+}
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* TOP */
+#top{
+  height:100vh;
+  max-height: 700px;
+  min-height: 300px;
+  background-image: url("img/bcg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: unset;
+}
+#particleContainer{
+  position:absolute;
+  display:none;
+}
+#top>section{
+  position: absolute;
+}
+h1{
+  font-size:2em;
+  font-weight:200;
+  padding-top:100px;
+}
+h1>span{
+  background-color: rgba(255, 209, 26, 0.85);
+  line-height: 1.4;
+  padding:0 10px;
+}
+/* CONTACT */
+#contact h2{
+  display:inline-block;
+  background: -webkit-linear-gradient(60deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 5px solid;
+  border-image: linear-gradient(60deg, red, blue);
+  border-image-slice: 1;
+  padding:3px 7px;
+  cursor:pointer;
+}
+#contact h2:hover{
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: white;
+}

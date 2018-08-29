@@ -1,309 +1,44 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>IX Sesja Paleolimnologiczna - Strona Główna</title>
-    <meta name="description" content="Strona poświęcona IX Sesji Paleolimnologicznej odbywającej się w Krakowie w dniach 15-16 marca 2018 roku.">
-    <meta name="keywords" content="IX Sesja Paleolimnologiczna, konferencja, geografia, Kraków">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Artur Górka - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="GeoConference.css">
+    <link rel="stylesheet" href="portfolio.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS0utRdx34bzvLT6j856p8ccB_CDkDBBw"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115576665-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-115576665-1');
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here&amp;subset=latin-ext" rel="stylesheet">
+    <script src="js/konva.min.js"></script>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
-  <div class='menu-trigger'>Menu</div>
-  <nav id="nav_wrap">
-    <ul>
-      <li><a href="index.html" class="active">Strona Główna</a></li>
-      <li><a href="contact.html">Kontakt/Dojazd</a></li>
-      <li><a href="files.html">Pliki do Pobrania</a></li>
-      <li><a href="gallery.html">Galeria</a></li>
-      <li><a href="program.html">Program Konferencji</a></li>
-    </ul>
-  </nav>
-  <!-- TOP SECTION -->
   <div id="top">
+    <section id="alternateTop">
+      <h1>
+        <span>Cześć!</span><br>
+        <span>Nazywam się Artur</span><br>
+        <span>Jestem Front-End Developerem</span>
+      </h1>
+    </section>
+    <div id="particleContainer"></div>
+  </div>
+
+  <div id="about">
     <section>
-      <header>
-        <h1>X Sesja<br>
-        Paleolimnologiczna</h1>
-        <h2>odbędzie się w Białymstoku</h2>
-        <div id="countdown"></div>
-      </header>
+      <h2>About me</h2>
     </section>
   </div>
 
-  <!-- WEBSITE CONTENT -->
-  <section class="content">
-    <br><br><div style="text-align:center;">
-      <h2>IX Sesja Paleolimnologiczna odbyła się</h2>
-      <h4>15-16 marca 2018 r., w Krakowie</h4>
-    </div>
-    <!-- intro -->
-    <br><h4 style="text-align:center;font-size:1.5em;">
-      „Dynamika zmian klimatycznych w czwartorzędzie oraz granica późny glacjał/holocen w osadach biogenicznych południowej Polski”
-    </h4><br>
-    <div style="font-size:1.15em;">
-      <p>&emsp;Tematem przewodnim tegorocznej sesji jest zapis zmian klimatycznych, rekonstruowany na
-      podstawie interdyscyplinarnych badań osadów biogenicznych. W ramach proponowanej sesji
-      przewidziano także referaty dotyczące zapisu granicy późny glacjał/holocen w osadach biogenicznych
-      południowej Polski oraz podsumowujące stan badań osadów torfowych w rejonie Krakowa.</p>
-      <br>
-      <p>&emsp;W czasie sesji podjęta zostanie także dyskusja na temat współczesnych procesów
-      sedymentacyjnych w zbiornikach jeziornych oraz interpretacji zdarzeń paleośrodowiskowych
-      w ekosystemach jeziornych i torfowiskowych, również w kontekście pradziejowej działalności
-      ludzkiej.</p>
-      <br>
-      <p>&emsp;Gospodarzami tegorocznej sesji, która odbędzie się w dniach 15-16 marca
-      jest Uniwersytet Pedagogiczny im. Komisji Edukacji Narodowej w Krakowie i
-      Instytut Botaniki im. W. Szafera Polskiej Akademii Nauk. Honorowy patronat nad
-      sesją objął Jego Magnificencja Rektor Uniwersytetu Pedagogicznego im. KEN w
-      Krakowie, prof. dr hab. Kazimierz Karolczak.</p>
-    </div>
-
-    <!-- divider -->
-    <div class="spacer">
-      <div class="mask"></div>
-    </div>
-
-    <!-- torfowiska krakow -->
-    <div class="clearfix" style="overflow:hidden;">
-      <div>
-        <h4>Badania torfowisk w rejonie Krakowa</h4>
-        <h6>prof. dr hab. Dorota Nalepka, Instytut Botaniki im. W. Szafera Polskiej Akademii Nauk</h6>
-        <figure class="side_img">
-          <img src="images/bloto.jpg" alt="wydobycie torfu w krakowie" title="Torfowisku Błoto (Wielkie Błoto) w Puszczy Niepołomickiej.">
-          <figcaption>
-            Foto 1. Torfowisku Błoto (Wielkie Błoto) w Puszczy Niepołomickiej. Dr Andrzej
-            Środoń (1908-1998) i mgr Aleksander Jankun (1911-1969) podczas pobierania rdzenia do
-            badań palinologicznych, sierpień 1948 r. Jedna z fotografii z archiwum dr hab. Andrzeja
-            Jankuna (1940-2007), przekazana do wykorzystania Dorocie Nalepce, która również badała to
-            torfowisko.
-        </figcaption>
-        </figure>
-        <br>
-        <p>W 1885 roku prof. Marian Raciborski (1863-1917) opisał z Torfowiska Błoto (Wielki
-        Błoto) w Puszczy Niepołomickiej, na wschód od Krakowa, warstwę popielatego osadu leżącą
-        pod pokładami torfu, którą uznał za ślad dawnego zbiornika wodnego. W 1948 roku mgr
-        Aleksander Jankun, wraz z dr Andrzejem Środoniem pobrali z tego torfowiska materiał do
-        analizy pyłkowej (Foto 1). W 1955 roku mgr Alicja Szponderówna zakończyła badania tego
-        rdzenia, interpretując wszystkie próby zanalizowane przez siebie i część prób, które
-        zanalizował mgr A. Jankun. Materiał okazał się bardzo trudny do interpretacji.
-        Skonstruowany diagram pyłkowy podzielony został tylko na część dolną, reprezentującą
-        zimny okres, prawdopodobnie schyłkowy okres plejstocenu i część górną, reprezentującą
-        okres holoceński (Szponder unpbl.). Ponownie osady z tego stanowiska zbadano
-        paleobotanicznie pod koniec lat 90. XX wieku (Nalepka 1994).</p><br>
-
-        <p>W rejonie Krakowa analizie palinologicznej poddano, jak dotychczas, jeszcze dwa
-        torfowiska. W zachodniej części było to torfowisko w Cholerzynie (Morawicy), wieku
-        holoceńskiego (Madeyska, Obidowicz 2001) i w południowej torfowisko w Podłężu (Nalepka
-        1994; Dzięgielewski i in. 2013). Inne osady torfowe, zbadane dotychczas powstawały w
-        starorzeczach (np. Nalepka 1994, b; Mamakowa 1970; Wasylikowa i in. 1985), a pozostałe
-        nawarstwienia organiczne powstawały często w związku z działalnością człowieka (np.
-        Koperowa w: Wasylikowa 1991; Nalepka 2009; Wasylikowa i in. 2009).</p><br>
-
-        <a id="literature" href="#"><span class="icon">&#xe007; </span>Wybrana literatura:</a>
-        <div id="literature_list">
-          <ul>
-            <li>Dzięgielewski K., Nalepka D., Walanus A. 2011 (2013). Dry swamp? Researching a
-            peat-bog and settlement in Podłęże near Kraków as a contribution to climate reconstruction in
-            the early Subatlantic period. Archaeologia Polona 49: 31–36.</li>
-            <li>Mamakowa K. 1970. Late-Glacial and Early-Holocene vegetation from the territory of
-            Kraków (Poland). Acta Palaeobotanica, 11: 3–12.</li>
-            <li>Nalepka D. 1994. Historia roślinności w zachodniej części Kotliny Sandomierskiej w
-            czasie ostatnich 15 000 lat. Wiadomości Bot. 38: 95–105.</li>
-            <li>Nalepka D. 2003. Prehistoric and historic settlement recorded in a terrestrial pollen
-            profile: Boreal to Subatlantic forest succession in a 60 cm thick sediment in Stanisławice
-            (southern Poland). Acta Palaeobotanica, 43: 101–112.</li>
-            <li>Nalepka D. 2009. Are sporomorphs collected from the Wawel renaissance Gardens
-            indicative of herbs cultivated by Queen Bona Sforza (1494-1557)? Acta Palaeobotanica, 49:
-            353–364.</li>
-            <li>Madeyska E, Obidowicz A. 2001. Wyniki analiz paleobotanicznych stanowiska
-            Cholerzyn. [W:] Kadrow S. (red.), Via Archaeologica. Kraków, 65–74.</li>
-            <li>Szponder A. 1955 (niepubl.). Analiza pyłkowa holoceńskiego torfowiska „Wielkie
-            Błoto” w Puszczy Niepołomickiej. Praca magisterska wykonana w Instytucie Botanicznym
-            UJ.</li>
-            <li>Wasylikowa K., Starkel L., Niedziałkowska E., Skiba S., Stworzewicz E. 1985.
-            Environmental changes in the Vistula valley at Pleszów caused by neolithic man. Przegląd
-            Archeologiczny, 33: 19–55.</li>
-            <li>Wasylikowa K. 1991. Roślinność wzgórza wawelskiego we wczesnym i późnym
-            średniowieczu na podstawie badań paleobotanicznych. Studia do Dziejów Wawelu, 5: 93–131.</li>
-            <li>Wasylikowa K.,  Wacnik A., Mueller-Bieniek A. 2009. Badania archeobotaniczne w
-            nawarstwieniach historycznych z terenu Krakowa: metodyka-stan badań-
-            perspektywy. Geologia, 35(1): 89-101.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div style="background-color:white;">
-    <div class="organizers_div">
-      <!-- organizers -->
-      <h3 style="padding-top:50px;">Organizatorzy</h3>
-      <div class="loga">
-        <img src="images/loga.jpg" alt="loga" title="loga organizatorów">
-      </div>
-      <div class="organizers">
-        <p><a href="http://ptlim.pl/" target="_blank">Komisja Paleolimnologii Polskiego Towarzystwa Limnologicznego</a></p><hr>
-        <p><a href="http://geografia.up.krakow.pl/" target="_blank">Instytut Geografii Uniwersytetu Pedagogicznego im. KEN w Krakowie</a></p><hr>
-        <p><a href="https://botany.pl/index.php/pl/" target="_blank">Instytut Botaniki im. W. Szafera Polskiej Akademii Nauk</a></p><hr>
-        <p><a href="http://www.fizyka.up.krakow.pl/" target="_blank">Instytut Fizyki Uniwersytetu Pedagogicznego im. KEN w Krakowie</a></p><hr>
-        <p><a href="http://www.wggios.agh.edu.pl/" target="_blank">Wydział Geologii, Geofizyki i Ochrony Środowiska Akademii Górniczo-Hutniczej</a></p><hr>
-        <p><a href="http://www.kbcz.pan.pl/home.html" target="_blank">Komitet Badań Czwartorzędu Polskiej Akademii Nauk</a></p><hr>
-        <p><a href="https://www.pan.pl/" target="_blank">Polska Akademia Nauk</a></p>
-      </div>
-    </div>
-  </div>
-
-  <section class="content">
-
-
-    <!-- workshops -->
-    <div class="workshops">
-      <h3>Warsztaty</h3>
-      <div class="container" style="margin:10px 0;">
-        <div class="item">
-          <h4>Statystyka</h4>
-          <div class="work_desc">
-            <div>
-              UP w Krakowie, ul. Podchorążych 2, sala 110N (I piętro)
-              (nowy budynek UP, wejście możliwe także od ulicy Adama Chmiela)
-              <br><br>15 marca (czwartek), godz. 10.00-13.00
-            </div>
-            <a href="#">czytaj więcej</a>
-          </div>
-        </div>
-        <div class="item">
-          <h4>Sedymentologia</h4>
-          <div class="work_desc">
-            <div>
-              Instytut Geografii UP w Krakowie, ul. Podchorążych 2 pokój 427 (IV piętro)
-              (wschodnie skrzydło głównego budynku)
-              <br><br>15 marca (czwartek), godz. 10.00-13.00
-            </div>
-            <a href="#">czytaj więcej</a>
-          </div>
-        </div>
-        <div class="item">
-          <h4>Paleobotanika</h4>
-          <div class="work_desc">
-            <div>
-              Zakład Paleobotaniki Instytutu Botaniki im. W. Szafera Polskiej Akademii Nauk,
-              ul. Lubicz 46, II piętro
-              <br><br>15 marca (czwartek), godz. 10.00-12:30
-            </div>
-            <a href="#">czytaj więcej</a>
-          </div>
-        </div>
-        <div class="item">
-          <h4>Malakofauna</h4>
-          <div class="work_desc">
-            <div>
-              Instytut Geografii UP w Krakowie, ul. Podchorążych 2, sala 533 (V piętro)
-              (wschodnie skrzydło głównego budynku)
-              <br><br>15 marca (czwartek), godz. 10.15-13.00
-            </div>
-            <a href="#">czytaj więcej</a>
-          </div>
-        </div>
-        <div class="item">
-          <h4>Geochemia</h4>
-          <div class="work_desc">
-            <div>
-              UP w Krakowie, ul. Podchorążych 2, sala 111N (I piętro)
-              (nowy budynek UP, wejście możliwe także od ulicy Adama Chmiela)
-              <br><br>15 marca (czwartek), godz. 10.00-13.00
-            </div>
-            <a href="#">czytaj więcej</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- divider -->
-    <div class="spacer">
-      <div class="mask"></div>
-    </div>
-
-    <!-- place -->
-    <div class="double clearfix" style="overflow:hidden;margin-top:30px;">
-      <div>
-        <h4>Sesja Paleolimnologiczna odbedzie się w Krakowie,</h4>
-        <p>w którym co krok można napotkać na niezwykłe
-        zabytki, świadczące o długiej historii tego miasta (według gminnej ewidencji
-        jest ich ponad 6 tysięcy). Jednym z najchętniej odwiedzanych przez turystów
-        miejsc w Krakowie jest Stare Miasto, które od 1978 roku wraz z Wawelem,
-        Kazimierzem i Stradomiem jest wpisane na listę światowego dziedzictwa UNESCO.
-        Nawet krótki pobyt w tej historycznej stolicy Polski może zapewnić wielu
-        niezapomnianych wrażeń.</p><br>
-
-        <p>Dla tych, którzy chcieliby zwiedzić Kraków i dowiedzieć się więcej na temat
-        jego historii polecamy strony:</p>
-
-        <div class="place_link_list">
-          <a target="_blank" href="http://www.krakow.pl/odwiedz_krakow/264,glowna.html">Magiczny Kraków</a>
-          <a target="_blank" href="https://mapa.polskieszlaki.pl/krakow/">Mapa zabytków</a>
-          <a target="_blank" href="http://rozklady.mpk.krakow.pl/?linia=">Komunikacja miejska</a>
-          <a target="_blank" href="https://m.meteo.pl/krakow/60">Pogoda</a>
-        </div>
-      </div>
-
-      <div class="breakout">
-          <div class="img1"></div>
-          <div class="img2"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HISTORY -->
-  <div id="history">
+  <div id="projects">
     <section>
-      <h3 style="padding:40px 0 20px 0;">Historia Konferencji</h3>
-      <div class="communicate">
-        <p>W ramach tworzenia nowej strony internetowej Sesji Paleologicznych mamy prośbę o przesyłanie na <a href="contact.html">adres email</a> archiwalnych materiałów  z poprzednich sesji, wpisując w temat emaila "archiwum".</p>
-      </div>
-      <div class="history_list">
-        <a class="history_item" href="javascript:map.setCenter(mwarszawa.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>„Osady limniczne i torfowe. Identyfikacja i interpretacja”</p><a href='files/slett 04_1_pp_44-45.pdf' target='_blank'>czytaj więcej</a>">I Sesja - Warszawa</a>
-        <a class="history_item" href="javascript:map.setCenter(mpoznan.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>„Przeszłość dla przyszłości. Badania paleośrodowiskowe w ochronie przyrody jezior i torfowisk”</p><a href='files/Poznań_sesja_II.pdf' target='_blank'>czytaj więcej</a>">II Sesja - Poznań</a>
-        <a class="history_item" href="javascript:map.setCenter(mgdansk.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>„Badania współczesnych procesów vs rekonstrukcje paleośrodowiskowe: szanse i wyzwania związane z próbą integracji „neo” i „paleo”</p><a href='files/slett 06_2_pp_119-122.pdf' target='_blank'>czytaj więcej</a>">III Sesja - Gdańsk</a>
-        <a class="history_item" href="javascript:map.setCenter(mtorun.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Reakcja ekosystemów jeziorno-torfowiskowych na zmiany w zlewni bezpośredniej i ich zapis w osadach biogenicznych</p><a href='files/slett07_1_pp_92-97.pdf' target='_blank'>czytaj więcej</a>">IV Sesja - Toruń</a>
-        <a class="history_item" href="javascript:map.setCenter(mlublin.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Płytkie jeziora jako obiekty badań paleolimnologicznych i sukcesji torfowiskowej</p><a href='files/slett08_2_pp_101-106.pdf' target='_blank'>czytaj więcej</a>">V Sesja - Lublin</a>
-        <a class="history_item" href="javascript:map.setCenter(mlodz.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Zapis zimnych zdarzeń klimatycznych późnego vistulianu i holocenu w osadach biogenicznych jezior i torfowisk</p><a href='files/slett09_2_pp_71-73.pdf' target='_blank'>czytaj więcej</a>">VI Sesja - Łódź</a>
-        <a class="history_item" href="javascript:map.setCenter(mszczecin.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Znaczenie osadów jeziornych i bagiennych w badaniach czwartorzędu</p>">VII Sesja - Szczecin</a>
-        <a class="history_item" href="javascript:map.setCenter(mwarszawa.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Metody stosowane w badaniach czwartorzędowych osadów jeziornych i torfowiskowych<br><i>Jubileusz 70-lecia urodzin profesor Krystyny Szeroczyńskiej</i></p><a href='http://www.kbcz.pan.pl/home/aktualnosc/39.html' target='_blank'>czytaj więcej</a>">VIII Sesja - Warszawa</a>
-        <a class="history_item" href="javascript:map.setCenter(mkrakow.getPosition());map.setZoom(8);" data-name="<span class='close'>X</span><p>Dynamika zmian klimatycznych w czwartorzędzie oraz granica późny glacjał/holocen w osadach biogenicznych południowej Polski</p>">IX Sesja - Kraków</a>
-      </div>
-    </section>
-    <div style="position:relative;">
-      <div id="map-canvas"></div>
-      <div class="history_container">
-      </div>
-    </div>
-  </div>
-
-  <!-- BOTTOM SECTION -->
-  <div id="bottom">
-    <section>
-      <footer>
-        &copy; 2018 Sesja Paleolimnologiczna<br>
-        <span class="author">Autor: Artur Górka</span>
-      </footer>
+      <h2>My work</h2>
     </section>
   </div>
 
-  <script src="GeoConference.js"></script>
+  <div id="contact">
+    <section>
+      <h2>Get in touch</h2>
+    </section>
+  </div>
+
+  <script src="js/portfolio.js"></script>
 </body>
 </html>
