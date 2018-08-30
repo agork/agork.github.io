@@ -18,10 +18,10 @@
   </div>
   <nav id="side-menu">
     <div>
-      <a href="index.html" class="menu-button">home</a>
-      <a href="#about" class="menu-button">O mnie</a>
-      <a href="#projects" class="menu-button">Projekty</a>
-      <a href="#contact" class="menu-button">Kontakt</a>
+      <a href="index.html" class="menu-button button">home</a>
+      <a href="#about" class="menu-button button">O mnie</a>
+      <a href="#projects" class="menu-button button">Projekty</a>
+      <a href="#contact" class="menu-button button">Kontakt</a>
     </div>
   </nav>
 
@@ -51,9 +51,9 @@
         </a>
         <div class="project-description">
           <div>
-            <header>Maciej Wielgosz Dietetyka</header>
+            <header>Maciej Wielgosz Dietetyk</header>
             <p>
-              Strona personalna dla dietetyka. Gra na niej zawarta odwzorowuje
+              Strona personalna. Gra na niej zawarta odwzorowuje
               wartości odżywcze znajdujące się w jedzeniu.
             </p>
           </div>
@@ -108,14 +108,18 @@
 
   <div id="contact">
     <section>
-      <h2>Skontaktuj się</h2>
       <form method="POST" action="https://formspree.io/asimar100@gmail.com">
-        <input type="email" name="email" placeholder="E-mail">
-        <textarea name="message" placeholder="Wiadomość"></textarea>
-        <button type="submit">Wyślij</button>
+        <h2>Skontaktuj się</h2>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Wiadomość" required></textarea>
+        <button type="submit" class="button">Wyślij</button>
       </form>
     </section>
   </div>
+
+  <footer>
+    <span>&copy;2018 Artur Górka</span>
+  </footer>
 
   <script src="js/portfolio.js"></script>
 </body>

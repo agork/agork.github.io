@@ -16,7 +16,7 @@ section{
 }
 h2{
   font-weight:400;
-  font-size:1.8em;
+  font-size:2em;
 }
 .clearfix:after {
   content: ".";
@@ -88,7 +88,7 @@ h2{
   font-weight:700;
   border: 2px solid black;
 }
-.menu-button::after{
+.button::after{
   z-index:-2;
   position: absolute;
   top:0;
@@ -101,12 +101,12 @@ h2{
   transition-duration: 0.3s;
   transition-timing-function: linear;
 }
-.menu-button:hover::after{
+.button:hover::after{
   width:120%;
   left:-10%;
   transform: rotate(-10deg);
 }
-.menu-button:nth-child(3):hover::after{
+.button:nth-child(3):hover::after{
   transform: rotate(10deg);
 }
 /* TOP */
@@ -310,3 +310,64 @@ h1>span{
   background-image: url("img/pr4.jpg");
 }
 /* CONTACT */
+form{
+  width:50%;
+  margin:100px auto;
+}
+form>h2{
+  text-align: center;
+  text-decoration: underline;
+}
+form>input,
+form>textarea,
+form>button{
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255,255,255,0);
+  margin:20px 0;
+}
+form>input,
+form>textarea{
+  display:block;
+  width:100%;
+  border: 1px solid black;
+  padding:20px;
+}
+form>textarea{
+  resize: none;
+  height:200px;
+}
+form>button{
+  display:block;
+  font-weight: 700;
+  border: 3px solid black;
+  position:relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding:14px 20px;
+  left:50%;
+  transform: translateX(-50%);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-transform: uppercase;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-transform: uppercase;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  text-transform: uppercase;
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-transform: uppercase;
+}
+/* FOOTER */
+footer{
+  background-color: black;
+  margin-top:20px;
+}
+footer>span{
+  display:block;
+  text-align: center;
+  padding:20px;
+  color:white;
+}
