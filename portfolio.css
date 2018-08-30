@@ -161,32 +161,32 @@ h1>span{
   width: 50%;
   height:300px;
 }
-.project>div{
+.project>div,
+.project>a{
   width:50%;
   height:100%;
   float:left;
-}
-.project-description{
   position:relative;
 }
 .project-description>header{
-  margin:10px 10px;
-  padding:2px 5px;
+  margin:15px 15px;
   font-weight: 700;
-  background-color: rgba(255, 209, 26, 1);
+  /*padding:2px 5px;
+  background-color: rgba(255, 209, 26, 1);*/
   display:inline-block;
 }
 .project-description>p{
-  margin:0 10px;
+  margin:0 15px;
 }
 .project-description>span{
   display:block;
   position:absolute;
+  z-index:2;
   bottom:10px;
   left:-30px;
   width:60px;
   height:30px;
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(255, 209, 26, 0.8);
   -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
   clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
@@ -249,25 +249,30 @@ h1>span{
   }
 }
 .project-image{
+  display:block;
+  overflow:hidden;
+}
+.project-image>div{
+  width:100%;
+  height:100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: all .5s;
 }
-.project-image a{
-  display:block;
-  width:100%;
-  height:100%;
+.project-image:hover>div{
+  transform: scale(1.2);
 }
-.i1{
+.i1>div{
   background-image: url("img/pr1.jpg");
 }
-.i2{
+.i2>div{
   background-image: url("img/pr2.jpg");
 }
-.i3{
+.i3>div{
   background-image: url("img/pr3.jpg");
 }
-.i4{
+.i4>div{
   background-image: url("img/pr4.jpg");
 }
 /* CONTACT */
