@@ -11,11 +11,11 @@ wentOff = false;
 //should be called on resize event
 function checkView(){
   if(WIDTH>500){
-    document.getElementById('particleContainer').style.display = 'block';
+    document.getElementById('particle-container').style.display = 'block';
     //document.getElementById('alternateTop').style.display = 'none';
   }else{
-    document.getElementById('particleContainer').style.display = 'none';
-    document.getElementById('alternateTop').style.display = 'block';
+    document.getElementById('particle-container').style.display = 'none';
+    document.getElementById('alternate-top').style.display = 'block';
   }
   numberOfP = Math.round(WIDTH / 40);
   rangeOfP = numberOfP*10;
@@ -23,7 +23,7 @@ function checkView(){
 checkView();
 
 var stage = new Konva.Stage({
-  container: 'particleContainer',
+  container: 'particle-container',
   width: WIDTH,
   height: HEIGHT
 });
@@ -167,24 +167,24 @@ function eval(x, sta1, sto1, sta2, sto2){
 }
 
 //NAVIGATION
-var menuIcon = document.getElementById("menuIcon"),
+var menuIcon = document.getElementById("menu-icon"),
 isMenuOn = false;
 menuIcon.addEventListener("click", triggerMenu);
 
 function triggerMenu(){
   if(isMenuOn){
-    document.getElementById("sideMenu").style.width = '0px';
+    document.getElementById("side-menu").style.width = '0px';
     isMenuOn = false;
   }else{
     if(WIDTH>500)
-      document.getElementById("sideMenu").style.width = '400px';
+      document.getElementById("side-menu").style.width = '400px';
     else
-      document.getElementById("sideMenu").style.width = '100%';
+      document.getElementById("side-menu").style.width = '100%';
     isMenuOn = true;
   }
 }
 
-var menuButtons = document.querySelectorAll(".menuButton");
+var menuButtons = document.querySelectorAll(".menu-button");
 for(var i = 0 ; i < menuButtons.length; i++){
   menuButtons[i].addEventListener("click", triggerMenu);
 }

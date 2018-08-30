@@ -26,22 +26,22 @@ h2{
   clear: both;
 }
 /* MENU */
-#menuIcon{
+#menu-icon{
   z-index:10;
   position: fixed;
   top:10px;
   right:10px;
   transition-duration: 1s;
   background-color: rgba(255, 209, 26, 0.85);
-  opacity:0.5;
+  opacity:0.6;
   width:70px;
   height:70px;
   border-radius:50%;
 }
-#menuIcon:hover{
+#menu-icon:hover{
   opacity:0.9;
 }
-#menuIcon span{
+#menu-icon span{
   display:block;
   background-color: black;
   width:34px;
@@ -50,7 +50,7 @@ h2{
   position: relative;
   top:10px;
 }
-#sideMenu{
+#side-menu{
   z-index:9;
   position:fixed;
   top:0;
@@ -67,13 +67,13 @@ h2{
   background: -ms-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* ie10+ */
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.95) 100%); /* w3c */
 }
-#sideMenu>div{
+#side-menu>div{
   position:relative;
   display:inline-block;
   top:50%;
   transform:translateY(-50%);
 }
-.menuButton{
+.menu-button{
   display:inline-block;
   padding:8px 14px;
   margin:5px;
@@ -88,21 +88,26 @@ h2{
   font-weight:700;
   border: 2px solid black;
 }
-.menuButton::after{
+.menu-button::after{
   z-index:-2;
   position: absolute;
   top:0;
   left:50%;
   content:"";
   width:0;
-  height:100%;
+  height:70%;
+  top:15%;
   background-color:rgba(255, 209, 26, 1);
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   transition-timing-function: linear;
 }
-.menuButton:hover::after{
-  width:100%;
-  left:0;
+.menu-button:hover::after{
+  width:120%;
+  left:-10%;
+  transform: rotate(-10deg);
+}
+.menu-button:nth-child(3):hover::after{
+  transform: rotate(10deg);
 }
 /* TOP */
 #top{
@@ -116,7 +121,7 @@ h2{
   mix-blend-mode: unset;
   position: relative;
 }
-#particleContainer{
+#particle-container{
   position:absolute;
   display:none;
 }
@@ -145,8 +150,9 @@ h1>span{
 /* PROJECTS */
 #projects{
   max-width: 1600px;
+  margin:auto;
 }
-.projectContainer{
+.project-container{
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -160,13 +166,97 @@ h1>span{
   height:100%;
   float:left;
 }
-.projectDescription{
-
+.project-description{
+  position:relative;
 }
-.projectImage{
+.project-description>header{
+  margin:10px 10px;
+  padding:2px 5px;
+  font-weight: 700;
+  background-color: rgba(255, 209, 26, 1);
+  display:inline-block;
+}
+.project-description>p{
+  margin:0 10px;
+}
+.project-description>span{
+  display:block;
+  position:absolute;
+  bottom:10px;
+  left:-30px;
+  width:60px;
+  height:30px;
+  background-color: rgba(0,0,0,0.05);
+  -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+.project-description>span::after{
+  display:block;
+  position:absolute;
+  content:"";
+  height:100%;
+  top:0;
+  background-color: rgba(255, 209, 26, 1);
+  overflow:hidden;
+  animation-duration: 2s;
+  animation-name: arrow-left;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.project:nth-child(n+3)>.project-description>span{
+  left:auto;
+  right:-30px;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.project:nth-child(n+3)>.project-description>span::after{
+  animation-name: arrow-right;
+}
+@keyframes arrow-left {
+  0% {
+    right:0%;
+    width:0%;
+  }
+  25% {
+    right:0%;
+    width:50%;
+  }
+  50% {
+    right:50%;
+    width:50%;
+  }
+  100% {
+    right:100%;
+    width:0%;
+  }
+}
+@keyframes arrow-right {
+  0% {
+    left:0%;
+    width:0%;
+  }
+  25% {
+    left:0%;
+    width:50%;
+  }
+  50% {
+    left:50%;
+    width:50%;
+  }
+  100% {
+    left:100%;
+    width:0%;
+  }
+}
+.project-image{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.project-image a{
+  display:block;
+  width:100%;
+  height:100%;
 }
 .i1{
   background-image: url("img/pr1.jpg");
