@@ -190,16 +190,9 @@ for(var i = 0 ; i < menuButtons.length; i++){
 }
 
 // MAP
-google.maps.event.addDomListener(window, 'load', init);
-function init() {
-  var mapOptions = {
-    zoom: 11,
-    center: new google.maps.LatLng(50.061672, 19.938199), // Kraków
-    // How you would like to style the map.
-    styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#a48b10"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#f5cf12"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#f5cf12"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.province","elementType":"labels","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"visibility":"on"},{"color":"#333333"},{"weight":"0.63"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"color":"#606060"},{"visibility":"on"},{"weight":"0.67"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5cf12"},{"gamma":"1"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5cf12"},{"visibility":"on"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#a48b10"},{"gamma":"0.00"},{"weight":"0.93"},{"lightness":"-100"},{"saturation":"100"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#a48b10"},{"saturation":"0"},{"visibility":"on"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#89740a"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"visibility":"on"},{"weight":"1.12"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"weight":"0.94"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#a48b10"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#a48b10"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#a48b10"},{"lightness":29},{"weight":0.2},{"visibility":"off"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#f5cf12"}]},{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"off"},{"color":"#ffffff"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#f5cf12"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#f5cf12"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#a48b10"},{"visibility":"on"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#a48b10"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":17}]}]
-  };
-
-  var mapElement = document.getElementById('map');
-
-  var map = new google.maps.Map(mapElement, mapOptions);
-}
+var mymap = L.map('map', {zoomControl: false}).setView([50.0646501, 19.9449799], 13);
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.light',
+    accessToken: 'pk.eyJ1IjoiYXNpbWFyMTAwIiwiYSI6ImNqbGhzZnduaDFndWwzcG10NjJ1Z21iY2wifQ.KeTYitQ52DDtNzjSS8og8w'
+}).addTo(mymap);
